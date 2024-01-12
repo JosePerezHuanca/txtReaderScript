@@ -1,0 +1,5 @@
+cytolk
+keyboard
+wxpython
+pygame
+pyperclip
