@@ -18,7 +18,7 @@ with tolk.tolk():
     keyboard.add_hotkey('alt+shift+up', reader.previousLine);
     keyboard.add_hotkey('alt+shift+home', reader.beginText);
     keyboard.add_hotkey('alt+shift+end', reader.endText);
-    keyboard.add_hotkey('alt+shift+space', reader.speakCurrentLine);
+    keyboard.add_hotkey('alt+shift+r', reader.speakCurrentLine);
     keyboard.add_hotkey('alt+shift+c', reader.copyCurrentLine);
     keyboard.add_hotkey('alt+shift+t', reader.speakTitle);
     keyboard.wait('alt+shift+q')
