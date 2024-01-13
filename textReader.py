@@ -81,5 +81,8 @@ class Reader:
         self.speakCurrentLine();
 
     def copyCurrentLine(self):
-        pyperclip.copy(self.textContent[self.currentItem]);
-        tolk.speak('Copied');
+        if not self.textContent:
+            tolk.speak('No hay nada para copiar');
+        else:
+            pyperclip.copy(self.textContent[self.currentItem]);
+            tolk.speak('Copied');
