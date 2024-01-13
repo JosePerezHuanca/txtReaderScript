@@ -3,6 +3,7 @@ import keyboard;
 import wx;
 from textReader import Reader;
 from soundManager import Sound;
+import time;
 
 
 with tolk.tolk():
@@ -21,5 +22,11 @@ with tolk.tolk():
     keyboard.add_hotkey('alt+shift+r', reader.speakCurrentLine);
     keyboard.add_hotkey('alt+shift+c', reader.copyCurrentLine);
     keyboard.add_hotkey('alt+shift+t', reader.speakTitle);
-    keyboard.wait('alt+shift+q')
+    exitBool=False;
+    while not exitBool:
+        if keyboard.is_pressed('alt+shift+q'):
+            exitBool=True;
+            sound.exitSound();
+            time.sleep(0.9);
+            app.ExitMainLoop();
     app.MainLoop();
