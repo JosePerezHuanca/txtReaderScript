@@ -4,6 +4,7 @@ import wx;
 import codecs;
 import pyperclip;
 from soundManager import Sound;
+import time;
 
 class Reader:
     def __init__(self):
@@ -36,14 +37,18 @@ class Reader:
 
     def speakCurrentLine(self):
         if not self.textContent:
+            time.sleep(0.1);
             tolk.speak('Primero selecciona un archivo');
         else:
+            time.sleep(0.1);
             tolk.speak(self.textContent[self.currentItem]);
 
     def speakTitle(self):
         if not self.fileName:
+            time.sleep(0.1)
             tolk.speak('Primero selecciona un archivo');
         else:
+            time.sleep(0.1);
             tolk.speak(self.fileName);
 
     def nextLine(self):
