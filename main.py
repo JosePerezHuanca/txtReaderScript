@@ -27,6 +27,6 @@ with tolk.tolk():
         if keyboard.is_pressed('alt+shift+q'):
             exitBool=True;
             sound.exitSound();
-            time.sleep(0.9);
+            time.sleep(0.6);
             app.ExitMainLoop();
     app.MainLoop();
